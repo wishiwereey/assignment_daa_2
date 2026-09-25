@@ -82,9 +82,9 @@ For n = 100, 100 removals were used because the structure only contains 100 elem
 
 Dynamic Array was much faster for random access. At n = 100000 it took about 0.011 ms, while Linked List took about 1499.388 ms.
 
-![Execution Time](results/plots/execution_time.png)
+![Execution Time vs n](results/plots/execution_time.png)
 
-![Element Accesses](results/plots/operations.png)
+![Element Accesses vs n](results/plots/operations.png)
 
 ## Search
 Both structures needed more time as n increased. At n = 100000, Dynamic Array took about 151.215 ms and Linked List took about 230.577 ms.
