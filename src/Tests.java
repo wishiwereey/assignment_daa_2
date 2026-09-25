@@ -5,6 +5,7 @@ public class Tests {
         testArray();
         testList();
         testHeap();
+        compareWithJavaCollections();
         System.out.println("Passed: " + passed);
         System.out.println("Failed: " + failed);
     }
@@ -96,5 +97,43 @@ public class Tests {
         } catch (IllegalStateException e) {
             passed++;
         }
+    }
+    static void compareWithJavaCollections() {
+        DynamicArray<Integer> myArray = new DynamicArray<>();
+        java.util.ArrayList<Integer> javaArray = new java.util.ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            myArray.add(i);
+            javaArray.add(i);
+        }
+        myArray.add(10, 500);
+        javaArray.add(10, 500);
+        check(myArray.get(10).equals(javaArray.get(10)));
+        check(myArray.remove(20).equals(javaArray.remove(20)));
+        check(myArray.contains(500) == javaArray.contains(500));
+        check(myArray.size() == javaArray.size());
+        LinkedList<Integer> myList = new LinkedList<>();
+        java.util.LinkedList<Integer> javaList = new java.util.LinkedList<>();
+        for (int i = 0; i < 100; i++) {
+            myList.add(i);
+            javaList.add(i);
+        }
+        myList.add(10, 500);
+        javaList.add(10, 500);
+        check(myList.get(10).equals(javaList.get(10)));
+        check(myList.remove(20).equals(javaList.remove(20)));
+        check(myList.contains(500) == javaList.contains(500));
+        check(myList.size() == javaList.size());
+        MinHeap myHeap = new MinHeap();
+        java.util.PriorityQueue<Integer> javaHeap = new java.util.PriorityQueue<>();
+        int[] values = {5, 2, 8, 1, 9, 3, 3, 7};
+        for (int x : values) {
+            myHeap.insert(x);
+            javaHeap.add(x);
+        }
+        check(myHeap.peekMin() == javaHeap.peek());
+        while (!javaHeap.isEmpty()) {
+            check(myHeap.extractMin() == javaHeap.poll());
+        }
+        check(myHeap.isEmpty());
     }
 }
