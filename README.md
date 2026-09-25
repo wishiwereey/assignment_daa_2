@@ -112,5 +112,4 @@ I would use Linked List when there are many insertions or removals at the beginn
 I would use Min Heap when I need to repeatedly get the smallest value.
 
 ## Conclusion
-
 This assignment showed that the choice of data structure depends on the workload. The experimental results were mostly similar to the theoretical complexity, but actual execution times were still different between implementations.
