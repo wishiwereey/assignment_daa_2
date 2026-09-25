@@ -1,0 +1,5 @@
+n,Insert Time ms,Insert Comparisons,Insert Complexity,Extract Time ms,Extract Comparisons,Extract Complexity,Sorted
+100,0.038,204,O(log n),0.109,857,O(log n),true
+1000,0.133,2231,O(log n),0.308,15008,O(log n),true
+10000,0.746,22782,O(log n),2.960,216573,O(log n),true
+100000,3.027,228147,O(log n),18.809,2831638,O(log n),true
