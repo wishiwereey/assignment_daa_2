@@ -1,0 +1,5 @@
+n,Array Time ms,Array Accesses,Array Complexity,List Time ms,List Accesses,List Complexity
+100,0.519,10000,O(1),1.862,511508,O(n)
+1000,0.085,10000,O(1),15.404,4958128,O(n)
+10000,0.262,10000,O(1),177.814,49956907,O(n)
+100000,0.011,10000,O(1),1499.388,501597092,O(n)
