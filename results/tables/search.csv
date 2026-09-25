@@ -1,0 +1,5 @@
+n,Array Time ms,Array Comparisons,Array Complexity,List Time ms,List Comparisons,List Complexity
+100,1.435,99972,O(n),1.240,99972,O(n)
+1000,1.258,993284,O(n),4.404,993284,O(n)
+10000,12.728,9469645,O(n),43.623,9469645,O(n)
+100000,151.215,62747282,O(n),230.577,62747282,O(n)
